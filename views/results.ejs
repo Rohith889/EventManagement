@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <h1 class="text-center mb-3">
+              <i class="fas fa-user-plus"></i>  Events
+            </h1>
+            </div>
+            </div>
+          </div>
+    <title>results</title>
+  </head>
+  <a class="btn btn-primary btn-lg" href="/" role="button">Home Page</a>&nbsp;
+  <a class="btn btn-primary btn-lg" href="/events" role="button">Events</a><br><br>
+<body>
+  <br>
+  <div class='container'>
+      
+    <h1 style="display:inline-block">Results</h1>
+    <br>
+    <% for(var i=0; i < newArray.length; i++) { %>
+      <div  align="center" style="display: inline-block;"class="card-deck mx-auto" style="width: 18rem; display:inline-flex">
+        <a href="/details/<%=newArray[i].id %>" id="<%= newArray[i].id %>"style="color:black">
+        <div class="card  border border-danger" style="width:19rem;">
+          <img src="<%= newArray[i].imagec %>" style='height:185.59px; width: 100%;'class="card-img-top" alt="No Image">
+          <div class="card-body">
+            <h5 class="card-text"><%= newArray[i].title %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Organiser : <%= newArray[i].organiser %></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><%= newArray[i].category %></h6>
+            <p class="card-text">Location : <%= newArray[i].location %></p>
+            <p class="card-text">Pincode : <%= newArray[i].pincode %></p>
+            <p class="card-text">Date : <%= newArray[i].date %></p>
+            <p class="card-text">Entry Price : <%= newArray[i].price %></p>
+          </div>
+        </div>
+      </div>
+        
+    <% } %><br>
+    </div>
+</body>
+
+</html>

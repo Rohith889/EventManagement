@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <h1 class="text-center mb-3">
+              <i class="fas fa-user-plus"></i> Events 
+            </h1>
+            </div>
+            </div>
+          </div>
+    <title>Events</title>
+</head><br>
+<a class="btn btn-primary btn-lg" href="/" role="button">Home page</a>&nbsp;
+<a class="btn btn-primary btn-lg" href="/events" role="button">Events</a><br><br>
+<body>
+  <div align="center" class="container">
+    <div class="card border border-danger">
+          
+                <img src="<%= obj[0].imagec %>" style=" width:15%" class="card-img-top" alt="..." height="180" width="60">
+              
+                <div class="card-body">
+              <h1 class="card-text"><%= obj[0].title %></h1>
+              <h2 class="card-text">Organiser : <%= obj[0].organiser %></h2>
+             <h4 class="card-text">Location : <%= obj[0].location%></h4>
+             <h4 class="card-text">Category : 
+             <span class="card-text"> <%= obj[0].category %></span></h4>
+            <h4 class="card-text">Date : <%= obj[0].date %></h4>
+             <h5 class="card-text">Entry : <%= obj[0].price %></h5>
+             
+             <p class="card-text"><%= obj[0].description %>
+             </p>
+            </div>
+           
+       </div>
+          
+  </div>
+</body>

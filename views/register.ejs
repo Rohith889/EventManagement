@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://bootswatch.com/4/superhero/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <div class="row mt-5">
+        <div class="col-md-6 m-auto">
+          <div class="card card-body">
+            <h1 class="text-center mb-3">
+              <i class="fas fa-user-plus"></i>SignUp
+            </h1>
+            </div>
+            </div>
+          </div>
+    <title>Registration Form</title>
+  </head>
+        <script>
+            function validate()
+            {
+                var firstname=document.getElementById("firstname");
+ 
+                var gender=document.getElementById("gender");
+                var username=document.getElementById("username");
+                var password=document.getElementById("password");
+                var repassword=document.getElementById("repassword");
+                if(firstname.value.trim()==""|| username.value.trim()==""||password.value.trim()==""||repassword.value.trim()=="")
+                {
+                     alert("please fill the requirements...!");
+                     return false;
+                    
+                }
+                else if(firstname.value.length<=3)
+                {
+                     alert("min charecters 4...!")
+                     return false;
+                }
+                else if(password.value!==repassword.value)
+                {
+                     alert("Re-password is different...!");
+                     return false;
+                }
+                else
+                {
+                     return true;
+                }
+                
+                
+                var genderM=gender.male;
+                var genderF=gender.female;
+                if(genderM.checked==false && genderF.checked==false )
+                {
+                     alert("You must select male or female");
+                     return false;
+                }   
+                
+            }
+        </script>
+      
+    <body>
+        <center>
+        <form onsubmit=" return validate()" action="/insert"><pre>
+            <label for="firstname"><b>fullname:</b></label>
+            <input id="firstname" placeholder="fullname" name="firstname"type="text"/><br></pre>
+            <div id="GENDER">
+            <label for="gender"><b>Gender:</b></label>
+            <input type="radio" name="gender" value="male" checked> Male
+            <input type="radio" name="gender" value="female" checked> Female
+            <input type="radio" name="gender" value="other" checked> Other</div><br><pre>
+            <label for="username"><b>username:</b></label>
+            <input id="username" placeholder="username" name="username"type="text"/><br>
+            <label for="password"><b>password:</b></label>
+            <input id="password" placeholder="password" name="password"type="password"/><br>
+            <small>* dont share your password with anyone...!</small><br>
+            <label for="repassword"><b>Re-password:</b></label>
+            <input id="repassword" name="repassword"placeholder="confirm password" type="password"/><br>
+            <button  class="btn btn-primary btn-lg">submit</button><br><br>
+            <h5><p>already a user?<a class="button go" href="/login" role="button">SignIn</a></p></h5>
+            
+        </form>
+        </center>
+    </body>
+
+</html>
